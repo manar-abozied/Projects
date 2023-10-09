@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="appplication3.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&#038;display=swap" rel="stylesheet" />
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat" viewBox="0 0 16 16">
+        <path d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-building" viewBox="0 0 16 16">
+        <path d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1ZM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Z"/>
+        <path d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V1Zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3V1Z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal" viewBox="0 0 16 16">
+        <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+        <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hdd-stack-fill" viewBox="0 0 16 16">
+        <path d="M2 9a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1a2 2 0 0 0-2-2H2zm.5 3a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zM2 2a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2zm.5 3a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart-line-fill" viewBox="0 0 16 16">
+        <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-percent" viewBox="0 0 16 16">
+        <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0zM4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+    </svg> -->
+    <title>Elzero</title>
+</head>
+
+<body>
+    <!-- start-header -->
+
+    <div class="header">
+        <div class="container">
+            <a href="#" class="logo">Elzero</a>
+            <ul class="main">
+                <li><a href="#artical">Articles</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">OtherLinks</a>
+                    <div class="mega-menu">
+                        <div class="img-menu">
+                            <img src="megamenu.png" class="image">
+                        </div>
+                        <ul class="link">
+                            <li> <a href="#testimonials"><i class="bi bi-chat"></i>Testimonials</a></li>
+                            <li> <a href="#team"><i class="bi bi-person"></i>Team Members</a></li>
+                            <li> <a href="#services"><i class="bi bi-building"></i>Services</a></li>
+                            <li>
+                                <a href="#our-skills"> <i class="bi bi-check-circle"></i>Our Skills</a>
+                            </li>
+                            <li> <a href="#work-steps"><i class="bi bi-journal"></i>How It Works</a></li>
+
+                        </ul>
+                        <ul class="link">
+                            <li> <a href="#event"><i class="bi bi-calendar3"></i>event</a></li>
+                            <li><a href="#Pricing"><i class="bi bi-hdd-stack-fill"></i> Pricing Plans</a></li>
+                            <li> <a href="#Videos"><i class="bi bi-play-circle"></i>Top Videos</a></li>
+                            <li> <a href="# Stats"><i class="bi bi-bar-chart-line-fill"></i> Stats</a></li>
+                            <li> <a href="#discount"><i class="bi bi-percent"></i> Request A Discount</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- end-header -->
+    <!----start landing-->
+    <div< class="landing">
+        <div class="container">
+            <div class="text">
+                <h1>Welcome, To Elzero World</h1>
+                <p>Here Iam gonna share everything about my life. Books Iam reading, Games Iam Playing, Stories and Events</p>
+
+            </div>
+            <div class="image">
+                <img src="landing-image.png">
+            </div>
+
+        </div>
+        <a href="#artical"><img src="303-3030085_down-arrow-icon-png-download-double-down-arrow.png" class="sahm"></a>
+        </div>
+        <div class="articles" id="artical">
+            <h2 class="main-title">ARTICLES</h2>
+            <div class="container">
+                <div class="box">
+                    <img src="cat-01.jpg" alt="">
+                    <div class="contant">
+                        <h3>Test Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit </p>
+                    </div>
+                    <div class="info">
+                        <a href="#">READ MORE</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="cat-02.jpg" alt="">
+                    <div class="contant">
+                        <h3>Test Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit </p>
+                    </div>
+                    <div class="info">
+                        <a href="#">READ MORE</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="cat-03.jpg" alt="">
+                    <div class="contant">
+                        <h3>Test Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit</p>
+                    </div>
+                    <div class="info">
+                        <a href="#">READ MORE</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="cat-04.jpg" alt="">
+                    <div class="contant">
+                        <h3>Test Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit</p>
+                    </div>
+                    <div class="info">
+                        <a href="#">READ MORE</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="cat-05.jpg" alt="">
+                    <div class="contant">
+                        <h3>Test Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit</p>
+                    </div>
+                    <div class="info">
+                        <a href="#">READ MORE</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="cat-06.jpg" alt="">
+                    <div class="contant">
+                        <h3>Test Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit </p>
+                    </div>
+                    <div class="info">
+                        <a href="#">READ MORE</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="cat-07.jpg" alt="">
+                    <div class="contant">
+                        <h3>Test Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit </p>
+                    </div>
+                    <div class="info">
+                        <a href="#">READ MORE</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="cat-08.jpg" alt="">
+                    <div class="contant">
+                        <h3>Test Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit</p>
+                    </div>
+                    <div class="info">
+                        <a href="#">READ MORE</a>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="spikes"></div>
+        <!---end lnding-->
+
+        <!---start gallery---->
+        <div class="gallery" id="gallery">
+            <h2 class="main-title">Gallery</h2>
+            <div class="container">
+                <div class="box1">
+                    <div class="imagee">
+                        <img decoding="async" src="gallery-01.png" alt="" />
+                    </div>
+                </div>
+                <div class="box1">
+                    <div class="imagee">
+                        <img decoding="async" src="gallery-02.png" alt="" />
+                    </div>
+                </div>
+                <div class="box1">
+                    <div class="imagee">
+                        <img decoding="async" src="gallery-03.jpg" alt="" />
+                    </div>
+                </div>
+                <div class="box1">
+                    <div class="imagee">
+                        <img decoding="async" src="gallery-04.png" alt="" />
+                    </div>
+                </div>
+                <div class="box1">
+                    <div class="imagee">
+                        <img decoding="async" src="gallery-05.jpg" alt="" />
+                    </div>
+                </div>
+                <div class="box1">
+                    <div class="imagee">
+                        <img decoding="async" src="gallery-06.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Gallery -->
+        <!--start FEATURES-->
+        <div class="features" id="features">
+            <h2 class="main-title">Features</h2>
+            <div class="container">
+                <div class="box2 quality">
+                    <div class="img-holder"><img decoding="async" src="features-01 (1).jpg" alt="" /></div>
+                    <h2>Quality</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima</p>
+                    <a href="#">More</a>
+                </div>
+                <div class="box2 time">
+                    <div class="img-holder"><img decoding="async" src="features-02 (1).jpg" alt="" /></div>
+                    <h2>Time</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima</p>
+                    <a href="#">More</a>
+                </div>
+                <div class="box2 passion">
+                    <div class="img-holder"><img decoding="async" src="features-03 (1).jpg" alt="" /></div>
+                    <h2>Passion</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima</p>
+                    <a href="#">More</a>
+                </div>
+            </div>
+        </div>
+        <!-----end featutre------>
+        <!---------------start testimonials----------->
+        <div class="testimonials" id="testimonials">
+            <h2 class="main-title">TESTIMONIALS</h2>
+            <div class="container">
+                <div class="box3">
+                    <img decoding="async" src="avatar-01.png" alt="" />
+                    <h3>Mohamed Farag</h3>
+                    <span class="title">Full Stack Developer</span>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis voluptatum, amet est natus quaerat ducimus
+                    </p>
+                </div>
+                <div class="box3">
+                    <img decoding="async" src="avatar-02.png" alt="" />
+                    <h3>Mohamed Ibrahim</h3>
+                    <span class="title">Full Stack Developer</span>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis voluptatum, amet est natus quaerat ducimus
+                    </p>
+                </div>
+                <div class="box3">
+                    <img decoding="async" src="avatar-03.png" alt="" />
+                    <h3>Shady Nabil</h3>
+                    <span class="title">Full Stack Developer</span>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis voluptatum, amet est natus quaerat ducimus
+                    </p>
+                </div>
+                <div class="box3">
+                    <img decoding="async" src="avatar-04.png" alt="" />
+                    <h3>Amr Hendawy</h3>
+                    <span class="title">Full Stack Developer</span>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis voluptatum, amet est natus quaerat ducimus
+                    </p>
+                </div>
+                <div class="box3">
+                    <img decoding="async" src="avatar-05.png" alt="" />
+                    <h3>Sherief Ashraf</h3>
+                    <span class="title">Full Stack Developer</span>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis voluptatum, amet est natus quaerat ducimus
+                    </p>
+                </div>
+                <div class="box3">
+                    <img decoding="async" src="avatar-06.png" alt="" />
+                    <h3>Osama Mohamed</h3>
+                    <span class="title">Full Stack Developer</span>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis voluptatum, amet est natus quaerat ducimus
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-----end   testimonials-------->
+        <!---------------start TEAM MEMBERS-->
+
+        <div class="team" id="team">
+            <h2 class="main-title">Team Members</h2>
+            <div class="container">
+                <div class="box4">
+                    <div class="data">
+                        <img decoding="async" src="team-01.jpg" alt="" />
+
+                    </div>
+                    <div class="info">
+                        <h3>Name</h3>
+                        <p>Simple Short Description</p>
+                    </div>
+                </div>
+                <div class="box4">
+                    <div class="data">
+                        <img decoding="async" src="team-02.jpg" alt="" />
+
+                    </div>
+                    <div class="info">
+                        <h3>Name</h3>
+                        <p>Simple Short Description</p>
+                    </div>
+                </div>
+                <div class="box4">
+                    <div class="data">
+                        <img decoding="async" src="team-03.jpg" alt="" />
+
+                    </div>
+                    <div class="info">
+                        <h3>Name</h3>
+                        <p>Simple Short Description</p>
+                    </div>
+                </div>
+                <div class="box4">
+                    <div class="data">
+                        <img decoding="async" src="team-04.jpg" alt="" />
+
+                    </div>
+                    <div class="info">
+                        <h3>Name</h3>
+                        <p>Simple Short Description</p>
+                    </div>
+                </div>
+                <div class="box4">
+                    <div class="data">
+                        <img decoding="async" src="team-05.png" alt="" />
+
+                    </div>
+                    <div class="info">
+                        <h3>Name</h3>
+                        <p>Simple Short Description</p>
+                    </div>
+                </div>
+                <div class="box4">
+                    <div class="data">
+                        <img decoding="async" src="team-06.png" alt="" />
+
+                    </div>
+                    <div class="info">
+                        <h3>Name</h3>
+                        <p>Simple Short Description</p>
+                    </div>
+                </div>
+                <div class="box4">
+                    <div class="data">
+                        <img decoding="async" src="team-07.jpg" alt="" />
+
+                    </div>
+                    <div class="info">
+                        <h3>Name</h3>
+                        <p>Simple Short Description</p>
+                    </div>
+                </div>
+                <div class="box4">
+                    <div class="data">
+                        <img decoding="async" src="team-08.jpg" alt="" />
+
+                    </div>
+                    <div class="info">
+                        <h3>Name</h3>
+                        <p>Simple Short Description</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="spikes"></div>
+        <!-----------end TEAM MEMBERS--->
+        <!--------start services------>
+        <div class="services" id="services">
+            <h2 class="main-title">SERVICES</h2>
+            <div class="container">
+                <div class="box5">
+                    <div class="immservices">
+                        <img src="features-03 (1).jpg">
+                    </div>
+                    <h3>Security</h3>
+                    <div class="info">
+                        <a href="#">Details</a>
+                    </div>
+                </div>
+                <div class="box5">
+                    <div class="immservices">
+                        <img src="features-03 (1).jpg">
+                    </div>
+                    <h3>Fixing Issues</h3>
+                    <div class="info">
+                        <a href="#">Details</a>
+                    </div>
+                </div>
+                <div class="box5">
+                    <div class="immservices">
+                        <img src="features-03 (1).jpg">
+                    </div>
+                    <h3>Location</h3>
+                    <div class="info">
+                        <a href="#">Details</a>
+                    </div>
+                </div>
+                <div class="box5">
+                    <div class="immservices">
+                        <img src="features-03 (1).jpg">
+                    </div>
+                    <h3>Coding</h3>
+                    <div class="info">
+                        <a href="#">Details</a>
+                    </div>
+                </div>
+                <div class="box5">
+                    <div class="immservices">
+                        <img src="features-03 (1).jpg">
+                    </div>
+                    <h3>Security</h3>
+                    <div class="info">
+                        <a href="#">Details</a>
+                    </div>
+                </div>
+                <div class="box5">
+                    <div class="immservices">
+                        <img src="features-03 (1).jpg">
+                    </div>
+                    <h3>Marketing</h3>
+                    <div class="info">
+                        <a href="#">Details</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-------end services------------->
+
+        <div class="our-skills" id="our-skills">
+            <h2 class="main-title">OUR SKILLS</h2>
+            <div class="container">
+                <img src="skills.png" alt="">
+
+                <div class="skills">
+                    <div class="skill">
+                        <h3>Html<span>80%</span></h3>
+                        <div class="the-progress">
+                            <span style="width: 80%;"></span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <h3>CSS <span>85%</span></h3>
+                        <div class="the-progress">
+                            <span style="width: 85%"></span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <h3>JavaScript <span>70%</span></h3>
+                        <div class="the-progress">
+                            <span style="width: 70%"></span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <h3>Python <span>80%</span></h3>
+                        <div class="the-progress">
+                            <span style="width: 80%"></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!----------end our skills------>
+        <!---start work-->
+        <div class="work-steps" id="work-steps">
+            <h2 class="main-title">How It Works ?</h2>
+            <div class="container">
+                <img decoding="async" src="work-steps.png" alt="" class="images" />
+                <div class="info">
+                    <div class="box6">
+                        <img decoding="async" src="work-steps-1.png" alt="" />
+                        <div class="text">
+                            <h3>Business Analysis</h3>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim nesciunt obcaecati quisquam quis laborum recusandae debitis vel
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box6">
+                        <img decoding="async" src="work-steps-2.png" alt="" />
+                        <div class="text">
+                            <h3>Architecture</h3>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim nesciunt obcaecati quisquam quis laborum recusandae debitis vel
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box6">
+                        <img decoding="async" src="work-steps-3.png" alt="" />
+                        <div class="text">
+                            <h3>Developement</h3>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim nesciunt obcaecati quisquam quis laborum recusandae debitis vel
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!----end work------>
+        <!--------start event----->
+        <div class="events" id="events">
+            <div class="dots dot-up"><img src="dots.png"></div>
+            <div class="dots dot-down"><img src="dots.png"></div>
+            <h2 class="main-title">LATEST EVENTS</h2>
+            <div class="container">
+                <img decoding="async" src="events (1).png" alt="" class="imagess" />
+                <div class="info">
+                    <div class="time">
+                        <div class="unit">
+                            <span>15</span>
+                            <span>days</span>
+                        </div>
+                        <div class="unit">
+                            <span>08</span>
+                            <span>hours</span>
+                        </div>
+                        <div class="unit">
+                            <span>45</span>
+                            <span>Minutes</span>
+                        </div>
+                        <div class="unit">
+                            <span>55</span>
+                            <span>Seconds</span>
+                        </div>
+                    </div>
+                    <h2 class="title">Tech Masters Event 2021</h2>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aut ab, cum maiores fugit dolorem quaerat alias, quidem eos nobis nemo ut delectus veritatis perferendis possimus incidunt fugiat ea numquam.</p>
+                </div>
+                <div class="subscribe">
+                    <form action="">
+                        <input type="email" placeholder="enter your email">
+                        <input type="submit" value="subscribe">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!------------end event--------->
+        <!----------start pricing-->
+        <div class="pricing" id="pricing">
+            <div class="dots dot-up"><img src="dots.png"></div>
+            <div class="dots dot-down"><img src="dots.png"></div>
+            <h2 class="main-title">PRICING PLANS</h2>
+            <div class="container">
+                <div class="box7">
+                    <h3 class="title">basic</h3>
+                    <img src="hosting-basic.png" alt="">
+                    <div class="price">
+                        <span class="amount">$15</span>
+                        <span class="time">Per Month
+                        </span>
+                    </div>
+                    <ul>
+                        <li>10GB HDD Space</li>
+                        <li>5 Email Addresses</li>
+                        <li>2 Subdomains</li>
+                        <li>4 Databases</li>
+                        <li>Basic Support</li>
+
+                    </ul>
+                    <a href="#">choose plane</a>
+                </div>
+                <div class="box7 popular">
+                    <div class="label">Most Popular</div>
+                    <div class="title">Advanced</div>
+                    <img decoding="async" src="hosting-advanced.png" alt="" />
+                    <div class="price">
+                        <span class="amount">$25</span>
+                        <span class="time">Per Month</span>
+                    </div>
+                    <ul>
+                        <li>20GB HDD Space</li>
+                        <li>10 Email Addresses</li>
+                        <li>5 Subdomains</li>
+                        <li>8 Databases</li>
+                        <li>Advanced Support</li>
+                    </ul>
+                    <a href="#">Choose Plan</a>
+                </div>
+                <div class="box7">
+                    <h3 class="title">Professional</h3>
+                    <img src="hosting-professional.png" alt="">
+                    <div class="price">
+                        <span class="amount">$45</span>
+                        <span class="time">Per Month
+                        </span>
+                    </div>
+                    <ul>
+                        <li>50GB HDD Space</li>
+                        <li>20 Email Addresses</li>
+                        <li>10 Subdomains</li>
+                        <li>20 Databases</li>
+                        <li>Professional Support</li>
+
+                    </ul>
+                    <a href="#">choose plane</a>
+                </div>
+            </div>
+        </div>
+        <!-----------end pricing---------->
+        <!---------------start vedio-------->
+        <div class="videos " id="videos ">
+            <h2 class="main-title">PRICING PLANS</h2>
+            <div class="container">
+                <div class="holder">
+                    <div class="list">
+                        <div class="name"> TOP VIDEOS</div>
+                        <ul>
+                            <li>How To Create Sub Domain<span>05:18</span></li>
+                            <li>Playing With The DNS <span>03:18</span></li>
+                            <li>Everything About The Virtual Hosts <span>05:25</span></li>
+                            <li>How To Monitor Your Website <span>04:16</span></li>
+                            <li>Uncharted Beating The Last Boss <span>07:48</span></li>
+                            <li>Ys Oath In Felghana Overview <span>03:12</span></li>
+                            <li>Ys Series All Games Ending <span>08:10</span></li>
+                        </ul>
+                    </div>
+                    <div class="preview">
+                        <img src="video-preview.jpg" alt="">
+                        <d class="info">Everything About The Virtual Hosts</d>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-----------end vedio------------->
+        <!-------------start statis------>
+        <div class="stats" id="stats">
+            <h2>Our Awesome Stats</h2>
+            <div class="container">
+                <div class="box8">
+                    <spanc class="number">300</span>
+                        <spanc class="text">Clients</span>
+                </div>
+                <div class="box8">
+                    <spanc class="number">400</span>
+                        <spanc class="text">Projects</span>
+                </div>
+                <div class="box8">
+                    <spanc class="number">50</span>
+                        <spanc class="text">Countries</span>
+                </div>
+                <div class="box8">
+                    <spanc class="number">500</span>
+                        <spanc class="text">Money</span>
+                </div>
+            </div>
+        </div>
+        <!-------------end statis-------->
+        <!--------start countaet-------------->
+        <div class="discount" id="discount">
+            <div class="imagee">
+                <div class="content">
+                    <h2>We Have A Discount</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, excepturi, officia culpa architecto odit assumenda atque voluptates voluptate tenetur amet, sunt quas maxime beatae eligendi? Enim quae officia eos repellat?</p>
+                    <img src="discount.png">
+                </div>
+            </div>
+            <div class="form">
+                <div class="content">
+                    <h2>Request A Discount</h2>
+                    <form action="">
+                        <input class="input" type="text" placeholder="your name" name="name">
+                        <input class="input" type="email" placeholder="your email" name="email">
+                        <input class="input" type="text" placeholder="your phone" name="mobile">
+                        <textarea class="input" placeholder="Tell Us About Your Needs" name="message"></textarea>
+                        <input type="submit" value="Send" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!----------end countevt-->
+        <div class="footer" id="footer">
+            <div class="container">
+                <div class="box9">
+                    <h3>Elzero</h3>
+                    <ul class="social">
+                        <li>
+                            <a href="https://ar-ar.facebook.com/">
+                                <img src="2021_Facebook_icon.svg.png" style="width: 30px;">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/?lang=ar">
+                                <img src="logo-twitter-icon-symbol-0.png" style="width: 30px;">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/feed/">
+                                <img src="linkedin-4703921-3915173.webp" style="width: 30px;">
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus nulla rem, dignissimos iste aspernatur
+                    </p>
+                </div>
+                <div class="box9">
+                    <ul class="links">
+                        <li><a href="#">Important Link 1</a></li>
+                        <li><a href="#">Important Link 2</a></li>
+                        <li><a href="#">Important Link 3</a></li>
+                        <li><a href="#">Important Link 4</a></li>
+                        <li><a href="#">Important Link 5</a></li>
+                    </ul>
+                </div>
+                <div class="box9">
+                    <div class="line">
+                        <img src="pngtree-vector-location-icon-png-image_855035.jpg" alt="" style="width: 30px;">
+                        <div class="info">Egypt, Giza, Inside The Sphinx, Room Number 220</div>
+                    </div>
+                    <div class="line">
+                        <img src="download.png" alt="" style="width: 30px;">
+                        <div class="info">Business Hours: From 10:00 To 18:00</div>
+                    </div>
+                    <div class="line">
+                        <img src="b2bf656afc87e4bd026bb1133e796a82.jpg" alt="" style="width: 30px;">
+                        <div class="info">
+                            <span>+20123456789</span>
+                            <span>+20198765432</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box9 footer-gallery">
+                    <img decoding="async" src="gallery-01.png" alt="" />
+                    <img decoding="async" src="gallery-02.png" alt="" />
+                    <img decoding="async" src="gallery-03.jpg" alt="" />
+                    <img decoding="async" src="gallery-04.png" alt="" />
+                    <img decoding="async" src="gallery-05.jpg" alt="" />
+                    <img decoding="async" src="gallery-06.png" alt="" />
+                </div>
+            </div>
+            <p class="copyright"> By Eng Manar Aobzied</p>
+        </div>
+
+
+
+
+
+</body>
+
+</html>
